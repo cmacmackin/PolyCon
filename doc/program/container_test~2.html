@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+    <meta name="description" content="Documentation for This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types.">
+	 
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>container_test &ndash; This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types. </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>container_test 
+    <small>Program</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+    <li><i class="fa fa-pencil"></i> Chris MacMackin</li>
+     
+     
+    <li><i class="fa fa-calendar-o"></i> December 2015</li>
+     
+     
+    <li><i class="fa fa-legal"></i> GPLv3</li>
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/container_test.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/container_test.f90%7E2.html'>container_test.f90</a></li>
+  
+     <li class="active">container_test</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars">Variables</a></h3></div>
+    <div id="vars" class="panel-collapse collapse">
+      <div class="list-group">
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-char_c%7E2">char_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp_c%7E2">comp_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp4_c%7E2">comp4_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp8_c%7E2">comp8_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp16_c%7E2">comp16_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int_c%7E2">int_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int1_c%7E2">int1_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int2_c%7E2">int2_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int4_c%7E2">int4_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int8_c%7E2">int8_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-log_c%7E2">log_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real_c%7E2">real_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real4_c%7E2">real4_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real8_c%7E2">real8_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real16_c%7E2">real16_c</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-charin%7E2">charin</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-charout%7E2">charout</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-compin%7E2">compin</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-compout%7E2">compout</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp4in%7E2">comp4in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp4out%7E2">comp4out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp8in%7E2">comp8in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp8out%7E2">comp8out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp16in%7E2">comp16in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-comp16out%7E2">comp16out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-login%7E2">login</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-logout%7E2">logout</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-intin%7E2">intin</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-intout%7E2">intout</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int1in%7E2">int1in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int1out%7E2">int1out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int2in%7E2">int2in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int2out%7E2">int2out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int4in%7E2">int4in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int4out%7E2">int4out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int8in%7E2">int8in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-int8out%7E2">int8out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-realin%7E2">realin</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-realout%7E2">realout</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real4in%7E2">real4in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real4out%7E2">real4out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real8in%7E2">real8in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real8out%7E2">real8out</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real16in%7E2">real16in</a>
+        
+        <a class="list-group-item" href="../program/container_test%7E2.html#variable-real16out%7E2">real16out</a>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs">Subroutines</a></h3></div>
+    <div class="list-group">
+        <div id="subs" class="panel-collapse collapse">
+          
+          <a class="list-group-item" href="../program/container_test%7E2.html#proc-perform_test%7E2">perform_test</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprogs">All Programs</a></h3></div>
+    <div id="allprogs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../program/container_test.html">container_test</a>
+          
+          <a class="list-group-item" href="../program/container_test%7E2.html">container_test</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href='../module/container_mod.html'>container_mod</a></li>
+      
+      <li><a href='../module/abstract_container_mod.html'>abstract_container_mod</a></li>
+      
+      <li><a href="https://software.intel.com/en-us/node/511041">iso_fortran_env</a></li>
+      
+    </ul>
+  
+
+    
+    
+    <p>A test suite for the various concrete implementations of the
+ <a href="../type/container_type.html">container_type</a>. These implementations can be found int
+ <a href="../module/container_mod.html">container_mod</a> and are for all of the default scalar data types.</p>
+    
+    <br>
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-char_c%7E2"></span>type(<a href='../type/character_container.html'>character_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>char_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp_c%7E2"></span>type(<a href='../type/complex_container.html'>complex_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp4_c%7E2"></span>type(<a href='../type/complex4_container.html'>complex4_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp4_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp8_c%7E2"></span>type(<a href='../type/complex8_container.html'>complex8_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp8_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp16_c%7E2"></span>type(<a href='../type/complex16_container.html'>complex16_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp16_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int_c%7E2"></span>type(<a href='../type/int_container.html'>int_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int1_c%7E2"></span>type(<a href='../type/int1_container.html'>int1_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int1_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int2_c%7E2"></span>type(<a href='../type/int2_container.html'>int2_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int2_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int4_c%7E2"></span>type(<a href='../type/int4_container.html'>int4_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int4_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int8_c%7E2"></span>type(<a href='../type/int8_container.html'>int8_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int8_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-log_c%7E2"></span>type(<a href='../type/logical_container.html'>logical_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>log_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real_c%7E2"></span>type(<a href='../type/real_container.html'>real_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real4_c%7E2"></span>type(<a href='../type/real4_container.html'>real4_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real4_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real8_c%7E2"></span>type(<a href='../type/real8_container.html'>real8_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real8_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real16_c%7E2"></span>type(<a href='../type/real16_container.html'>real16_container</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real16_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charin%7E2"></span>character(len=12)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>charin</strong></td><td> =</td><td>'Hello world!'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charout%7E2"></span>character(len=12)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>charout</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-compin%7E2"></span>complex</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>compin</strong></td><td> =</td><td>(1.0,2.0)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-compout%7E2"></span>complex</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>compout</strong></td><td> =</td><td>(0.0,0.0)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp4in%7E2"></span>complex(kind=r4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp4in</strong></td><td> =</td><td>(1.0_r4,2.0_r4)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp4out%7E2"></span>complex(kind=r4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp4out</strong></td><td> =</td><td>(0.0_r4,0.0_r4)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp8in%7E2"></span>complex(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp8in</strong></td><td> =</td><td>(1.0_r8,2.0_r8)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp8out%7E2"></span>complex(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp8out</strong></td><td> =</td><td>(0.0_r8,0.0_r8)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp16in%7E2"></span>complex(kind=r16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp16in</strong></td><td> =</td><td>(1.0_r16,2.0_r16)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp16out%7E2"></span>complex(kind=r16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp16out</strong></td><td> =</td><td>(0.0_r16,0.0_r16)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-login%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>login</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-logout%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>logout</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-intin%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>intin</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-intout%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>intout</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int1in%7E2"></span>integer(kind=i1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int1in</strong></td><td> =</td><td>1_i1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int1out%7E2"></span>integer(kind=i1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int1out</strong></td><td> =</td><td>0_i1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int2in%7E2"></span>integer(kind=i2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int2in</strong></td><td> =</td><td>1_i2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int2out%7E2"></span>integer(kind=i2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int2out</strong></td><td> =</td><td>0_i2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int4in%7E2"></span>integer(kind=i4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int4in</strong></td><td> =</td><td>1_i4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int4out%7E2"></span>integer(kind=i4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int4out</strong></td><td> =</td><td>0_i4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int8in%7E2"></span>integer(kind=i8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int8in</strong></td><td> =</td><td>1_i8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-int8out%7E2"></span>integer(kind=i8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>int8out</strong></td><td> =</td><td>0_i8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-realin%7E2"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>realin</strong></td><td> =</td><td>1.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-realout%7E2"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>realout</strong></td><td> =</td><td>0.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real4in%7E2"></span>real(kind=r4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real4in</strong></td><td> =</td><td>1.0_r4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real4out%7E2"></span>real(kind=r4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real4out</strong></td><td> =</td><td>0.0_r4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real8in%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real8in</strong></td><td> =</td><td>1.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real8out%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real8out</strong></td><td> =</td><td>0.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real16in%7E2"></span>real(kind=r16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real16in</strong></td><td> =</td><td>1.0_r16</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-real16out%7E2"></span>real(kind=r16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>real16out</strong></td><td> =</td><td>0.0_r16</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-perform_test%7E2"></span><h3>
+subroutine <a href='../proc/perform_test%7E2.html'>perform_test</a>(container, inval, outval, cont_name)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>container</strong></td><td><p>The particular container which is to be tested</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>inval</strong></td><td><p>The value to place into the container</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>outval</strong></td><td><p>A variable in which to place the container's contents</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cont_name</strong></td><td><p>The name of the container class, to be used when printing output</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Performs the actual test on the containers. Also is effectively
+ testing that the polymorphism of <a href="../type/container_type.html">container_type</a> is behaving
+ as desired.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-6">&copy; 2015 This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types. was written by Chris MacMackin. </div>
+        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

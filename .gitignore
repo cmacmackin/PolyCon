@@ -3,6 +3,7 @@
 *.lo
 *.o
 *.obj
+*.s
 
 # Precompiled Headers
 *.gch
@@ -26,3 +27,9 @@
 *.exe
 *.out
 *.app
+test
+
+# Miscellaneous
+*~
+#*#
+.#*

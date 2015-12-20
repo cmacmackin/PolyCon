@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+    <meta name="description" content="Documentation for This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types.">
+	 
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>container_type &ndash; This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types. </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types. </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>container_type
+    <small>Derived Type</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+    <li><i class="fa fa-pencil"></i> Chris MacMackin</li>
+     
+     
+    <li><i class="fa fa-calendar-o"></i> December 2015</li>
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/abstract_container_mod.F90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/abstract_container_mod.f90.html'>abstract_container_mod.F90</a></li>
+  
+     <li><a href='../module/abstract_container_mod.html'>abstract_container_mod</a></li>
+  
+     <li class="active">container_type</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars">Variables</a></h3></div>
+    <div id="vars" class="panel-collapse collapse">
+      <div class="list-group">
+        
+        <a class="list-group-item" href="../type/container_type.html#variable-storage">storage</a>
+        
+        <a class="list-group-item" href="../type/container_type.html#variable-filled">filled</a>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs">Type-Bound Procedures</a></h3></div>
+    <div id="boundprocs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../type/container_type.html#boundprocedure-typeguard">typeguard</a>
+          
+          <a class="list-group-item" href="../type/container_type.html#boundprocedure-contents">contents</a>
+          
+          <a class="list-group-item" href="../type/container_type.html#boundprocedure-set">set</a>
+          
+          <a class="list-group-item" href="../type/container_type.html#boundprocedure-assign_container">assign_container</a>
+          
+          <a class="list-group-item" href="../type/container_type.html#boundprocedure-assignment%28%3D%29">assignment(=)</a>
+          
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes">All Derived Types</a></h3></div>
+    <div id="alltypes" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../type/character_container.html">character_container</a>
+          
+          <a class="list-group-item" href="../type/complex16_container.html">complex16_container</a>
+          
+          <a class="list-group-item" href="../type/complex4_container.html">complex4_container</a>
+          
+          <a class="list-group-item" href="../type/complex8_container.html">complex8_container</a>
+          
+          <a class="list-group-item" href="../type/complex_container.html">complex_container</a>
+          
+          <a class="list-group-item" href="../type/container_type.html">container_type</a>
+          
+          <a class="list-group-item" href="../type/int1_container.html">int1_container</a>
+          
+          <a class="list-group-item" href="../type/int2_container.html">int2_container</a>
+          
+          <a class="list-group-item" href="../type/int4_container.html">int4_container</a>
+          
+          <a class="list-group-item" href="../type/int8_container.html">int8_container</a>
+          
+          <a class="list-group-item" href="../type/int_container.html">int_container</a>
+          
+          <a class="list-group-item" href="../type/logical_container.html">logical_container</a>
+          
+          <a class="list-group-item" href="../type/real16_container.html">real16_container</a>
+          
+          <a class="list-group-item" href="../type/real4_container.html">real4_container</a>
+          
+          <a class="list-group-item" href="../type/real8_container.html">real8_container</a>
+          
+          <a class="list-group-item" href="../type/real_container.html">real_container</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    <h2>type, public, abstract :: container_type</h2>
+    
+    <p>An abstract derived type which contains data. This type can be
+ used for a sort of unlimited polymorphism. It is extended to
+ create different classes capable of holding particular 
+ data-types. Extensions must implement the procedure 
+ <a href="../type/container_type.html#boundprocedure-typeguard">typeguard</a> in order to provide the ability to
+ transfer data out of the container and into a variable. Assuming
+ that you are creating a concrete class called 
+ <code>example_container</code>, this should be implemented as follows:</p>
+<div class="codehilite"><pre> <span class="k">module </span><span class="n">example_container_mod</span>
+
+   <span class="k">use </span><span class="n">abstract_container_mod</span>
+   <span class="k">implicit none</span>
+<span class="k">   private</span>
+
+<span class="k">   type </span><span class="n">example</span>
+     <span class="kt">integer</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">i</span>
+   <span class="k">end type </span><span class="n">example</span>
+
+   <span class="k">type</span><span class="p">,</span> <span class="k">extends</span><span class="p">(</span><span class="n">container_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">example_container</span>
+   <span class="k">contains</span>
+<span class="k">     private</span>
+<span class="k">     procedure</span> <span class="kd">::</span> <span class="n">typeguard</span> <span class="o">=&gt;</span> <span class="n">example_guard</span>
+   <span class="k">end type </span><span class="n">example_container</span>
+
+ <span class="k">contains</span>
+
+<span class="k">   </span><span class="kt">logical </span><span class="k">function </span><span class="n">example_guard</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">lhs</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+     <span class="k">class</span><span class="p">(</span><span class="n">example_container</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this</span>
+     <span class="k">class</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lhs</span>
+     <span class="k">select type</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span>
+       <span class="k">type is</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+         <span class="n">lhs</span> <span class="o">=</span> <span class="nb">transfer</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">contents</span><span class="p">(),</span> <span class="n">lhs</span><span class="p">)</span>
+         <span class="n">ret</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+       <span class="k">class </span><span class="n">default</span>
+         <span class="n">ret</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+     <span class="k">end select</span>
+<span class="k">   end function </span><span class="n">example_guard</span>
+
+ <span class="k">end module </span><span class="n">example_container_mod</span>
+</pre></div>
+    <br>
+    
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-storage"></span>character(len=1),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>storage</strong></td><td></td><td></td><td><p>Variable in which to place data contents</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filled"></span>logical,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>filled</strong></td><td> =</td><td>.false.</td><td><p><code>.true.</code> if container is set, <code>.false.</code> otherwise</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+     
+    <section>
+    <h2>Type-Bound Procedures</h2>
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-typeguard"></span><h3>procedure(guard), private, deferred :: <strong>typeguard</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Performs the actual transfer of the container's contents to 
+ another variable.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/guard.html'>guard</a>(this, lhs)
+    
+    
+    
+<small>Prototype</small></h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>The variable which the container contents are to be 
+ transferred to.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>logical
+  </small></h4>
+  
+    
+        
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-contents"></span><h3>procedure, public :: <strong>contents</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Retrieves the contents of the container, in the form of a
+ character array.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private pure function contents(this)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(len=1),
+  dimension(:),allocatable</small></h4>
+  
+    
+    
+    <h4>Description</h4>
+       
+       <p>Returns the contents, encoded as a character array, of the 
+ container.</p>
+        
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-set"></span><h3>procedure, public :: <strong>set</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Sets the contents of the container.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private subroutine set(this, content)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>content</strong></td><td><p>The value to be placed in the container</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       <p>Sets the contents of the array to value passed. The type of the 
+ variable provided must be the same as the container variable is
+ designed to accept (as determined by the implementation of the
+ <a href="../type/container_type.html#boundprocedure-typeguard">typeguard</a> method in the concrete type 
+ extension), or else an error message will be printed and the
+ program will exit. If <code>gfortran</code> was used to compile then a 
+ backtrace will also be printed.</p>
+        
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assign_container"></span><h3>procedure, private, pass(rhs) :: <strong>assign_container</strong>  
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Assigns container contents to another variable.</p>
+  </div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private subroutine assign_container(lhs, rhs)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>The variable which the container contents will be assigned to.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>The container variable.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       <p>Transfers the contents of the container to another variable.
+ If the other variable is another container of the same type
+ then the contents will be transferred. If the other variable is
+ the same type as the contents of the container (as determined
+ by the <a href="../type/container_type.html#boundprocedure-typeguard">typeguard</a> routine provided for that 
+ concrete type extension) then it will be given the value held by
+ the container. Otherwise, an error message will be printed and 
+ the program stopped. If compiled with <code>gfortran</code> then a backtrace
+ will also be printed. In the event that the container was never
+ set to a value, then this also constitutes an error.</p>
+        
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-assignment%28%3D%29"></span><h3>generic, public :: <strong>assignment(=)</strong>  => <a href='../type/container_type.html#boundprocedure-assign_container'>assign_container</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+private subroutine assign_container(lhs, rhs)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(*),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>The variable which the container contents will be assigned to.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/container_type.html'>container_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>The container variable.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       <p>Transfers the contents of the container to another variable.
+ If the other variable is another container of the same type
+ then the contents will be transferred. If the other variable is
+ the same type as the contents of the container (as determined
+ by the <a href="../type/container_type.html#boundprocedure-typeguard">typeguard</a> routine provided for that 
+ concrete type extension) then it will be given the value held by
+ the container. Otherwise, an error message will be printed and 
+ the program stopped. If compiled with <code>gfortran</code> then a backtrace
+ will also be printed. In the event that the container was never
+ set to a value, then this also constitutes an error.</p>
+        
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+    </section>
+    
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-6">&copy; 2015 This provides an abstract data type, for which subclasses can be created to hold any type of variable as contents. Subclasses are provided for all of the built in variable types. was written by Chris MacMackin. </div>
+        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
