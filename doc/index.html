@@ -117,6 +117,10 @@ within data structures to so that a single implementation can hold
 arbitrary types of contents. The type of the contents can be selected
 when the data structure is constructed, by passing a particular subclass
 of the abstract container to the constructor.</p>
+<p>At present the single greatest weakness of this project is that it does
+not support the storage of arrays--only scalars (although scalar coarrays
+should be fine). It is unclear whether or not a solution to this problem
+is readily available.</p>
 <p>Extensions to the abstract type must implement the procedure
 <code>typeguard</code>, which tests that variables being passed to the
 container or to which the container's contents are assigned are of the
@@ -157,7 +161,9 @@ derived type is provided below.</p>
 
 
 <h2>Compiling</h2>
-<p>PolyCon is known to work with Gfortran 5.3.0 and ifort 16.0.1. The latter
+<p>PolyCon is known to work with Gfortran 5.3.0 and ifort 16.0.1 on Ubuntu/Linux
+Mint. It is known not to work for storing character strings when using
+Gfortran 4.8. The latter
 requires the <code>-assume realloc_lhs</code> to be used. A makefile is provided which
 calls <code>gfortran-5</code>. Static and shared libraries are compiled using <code>make static</code>
 and <code>make shared</code>, respectively. The test program can be build using

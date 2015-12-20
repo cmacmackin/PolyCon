@@ -26,7 +26,7 @@ module abstract_container_mod
   !!
   !! Provides an abstract container derived type which can be used 
   !! as a sort of unlimited polymorphic entity whose contents are
-  !! retrievable without type-guards. Different subclasses are created
+  !! retrievable with type-guards. Different subclasses are created
   !! in order to hold different data-types. See [[container_type]] for 
   !! instructions on creating concrete subclasses. See [[container_mod]]
   !! for subclasses containing the built-in data-types.
