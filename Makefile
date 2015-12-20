@@ -25,11 +25,11 @@ _OBJS = abstract_container_mod.o container_mod.o
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 # "make" builds all
-shared: $(OBJS)
-	$(FC) -shared -o $(OUTSHARED) $^ $(LDFLAGS)
+shared: init $(OBJS)
+	$(FC) -shared -o $(OUTSHARED) $(filter-out init,$^) $(LDFLAGS)
 
-static: $(OBJS)
-	ar rcs $(OUTSTATIC) $^
+static: init $(OBJS)
+	ar rcs $(OUTSTATIC) $(filter-out init,$^)
 
 $(OUTSTATIC): static
 
@@ -62,3 +62,8 @@ $(ODIR)/%.o: $(SDIR)/%.F95
 
 clean:
 	/bin/rm  -rf $(ODIR)/*.o ./tmp $(INC)/*.mod test
+
+init:
+	mkdir -p $(ODIR)
+	mkdir -p $(ODIR)/tests
+	mkdir -p $(INC)
