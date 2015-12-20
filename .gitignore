@@ -28,6 +28,7 @@
 *.out
 *.app
 test
+stack
 
 # Miscellaneous
 *~

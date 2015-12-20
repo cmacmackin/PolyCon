@@ -2,8 +2,8 @@
 FC = gfortran-5
 CC = gcc
 # flags for debugging or for maximum performance, comment as necessary
-FCFLAGS = -Ofast -I$(INC) -J$(INC) -fPIC
-LDFLAGS = -Ofast
+FCFLAGS = -Og -g -I$(INC) -J$(INC) -fPIC
+LDFLAGS = -Og -g
 # ifort flags:
 #FCFLAGS = -g -O0 -traceback -check all -assume realloc_lhs
 #FCFLAGS = -O3
@@ -36,7 +36,13 @@ $(OUTSTATIC): static
 test: $(OUTSTATIC) $(ODIR)/tests/container_test.o 
 	 $(FC) -o $@ $(filter-out $(OUTSTATIC),$^) $(OUTSTATIC) $(LDFLAGS)
 
-$(ODIR)/tests/container_test.o: $(SDIR)/tests/container_test.f90
+stack: init $(OBJS) $(ODIR)/tests/stack.o
+	$(FC) -o $@ $(filter-out init,$^) $(LDFLAGS)
+
+#$(ODIR)/tests/stack.o: $(SDIR)/tests/stack.f90 $(OBJS)
+#	$(FC) $(FCFLAGS) -fpic -o $@ -c $<
+
+$(ODIR)/tests/container_test.o: $(SDIR)/tests/container_test.f90 $(OBJS)
 	$(FC) $(FCFLAGS) -fpic -o $@ -c $<
 
 %: $(ODIR)/%.o

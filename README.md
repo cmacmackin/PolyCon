@@ -65,6 +65,11 @@ and `make shared`, respectively. The test program can be build using
 `make test`. At present there is no facility to install the libraries on your
 system.
 
+## Example Usage
+PolyCon can be used to create generic data structures. An example implementation
+of a stack data structure (as well as a test program) can be found in
+`src/test/stack.f90`. This can be compiled with `make stack`.
+
 ## Documentation
 In addition to the documentation in the README, the API is documented
 using [FORD](https://github.com/cmacmackin/ford). This documentation can
