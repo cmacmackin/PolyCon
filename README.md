@@ -10,6 +10,11 @@ arbitrary types of contents. The type of the contents can be selected
 when the data structure is constructed, by passing a particular subclass
 of the abstract container to the constructor.
 
+At present the single greatest weakness of this project is that it does
+not support the storage of arrays--only scalars (although scalar coarrays
+should be fine). It is unclear whether or not a solution to this problem
+is readily available.
+
 Extensions to the abstract type must implement the procedure
 `typeguard`, which tests that variables being passed to the
 container or to which the container's contents are assigned are of the
