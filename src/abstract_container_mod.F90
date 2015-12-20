@@ -31,7 +31,7 @@ module abstract_container_mod
   !! instructions on creating concrete subclasses. See [[container_mod]]
   !! for subclasses containing the built-in data-types.
 
-  use iso_fortran_env, only: stderr => error_unit
+  use iso_fortran_env, only: stderr => error_unit, i1 => int8
   implicit none
   private
 
@@ -84,7 +84,7 @@ module abstract_container_mod
     !! end module example_container_mod
     !!```
     private
-    character(len=1), dimension(:), allocatable   ::  storage
+    integer(i1), dimension(:), allocatable  ::  storage
       !! Variable in which to place data contents
     logical ::  filled = .false.
       !! `.true.` if container is set, `.false.` otherwise
@@ -94,8 +94,8 @@ module abstract_container_mod
       !! Performs the actual transfer of the container's contents to 
       !! another variable.
     procedure, public   ::  contents
-      !! Retrieves the contents of the container, in the form of a
-      !! character array.
+      !! Retrieves the contents of the container, in the form of an
+      !! integer array.
     procedure, public   ::  set
       !! Sets the contents of the container.
     procedure, pass(rhs)    ::  assign_container
@@ -167,7 +167,7 @@ contains
     !! Returns the contents, encoded as a character array, of the 
     !! container.
     class(container_type), intent(in)   ::  this
-    character(len=1), dimension(:), allocatable ::  contents
+    integer(i1), dimension(:), allocatable  ::  contents
     contents = this%storage
   end function contents
 

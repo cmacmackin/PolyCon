@@ -33,8 +33,8 @@ static: init $(OBJS)
 
 $(OUTSTATIC): static
 
-test: static $(ODIR)/tests/container_test.o 
-	 $(FC) -o $@ $(filter-out static,$^) $(OUTSTATIC) $(LDFLAGS)
+test: $(OUTSTATIC) $(ODIR)/tests/container_test.o 
+	 $(FC) -o $@ $(filter-out $(OUTSTATIC),$^) $(OUTSTATIC) $(LDFLAGS)
 
 $(ODIR)/tests/container_test.o: $(SDIR)/tests/container_test.f90
 	$(FC) $(FCFLAGS) -fpic -o $@ -c $<
