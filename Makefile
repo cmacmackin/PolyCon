@@ -2,8 +2,8 @@
 FC = gfortran-5
 CC = gcc
 # flags for debugging or for maximum performance, comment as necessary
-FCFLAGS = -g -fbounds-check -ffpe-trap=i,z,o -I$(INC) -J$(INC) -fPIC
-#LDFLAGS = 
+FCFLAGS = -Ofast -I$(INC) -J$(INC) -fPIC
+LDFLAGS = -Ofast
 # ifort flags:
 #FCFLAGS = -g -O0 -traceback -check all -assume realloc_lhs
 #FCFLAGS = -O3

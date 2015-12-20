@@ -11,7 +11,7 @@ when the data structure is constructed, by passing a particular subclass
 of the abstract container to the constructor.
 
 Extensions to the abstract type must implement the procedure
-[[container_type:typeguard]], which tests that variables being passed to the
+`typeguard`, which tests that variables being passed to the
 container or to which the container's contents are assigned are of the
 correct type. An example of a concrete implementation to hold a user-defined
 derived type is provided below.
@@ -49,6 +49,14 @@ contains
 
 end module example_container_mod
 ```
+
+## Compiling
+PolyCon is known to work with Gfortran 5.3.0 and ifort 16.0.1. The latter
+requires the `-assume realloc_lhs` to be used. A makefile is provided which
+calls `gfortran-5`. Static and shared libraries are compiled using `make static`
+and `make shared`, respectively. The test program can be build using
+`make test`. At present there is no facility to install the libraries on your
+system.
 
 ## Documentation
 In addition to the documentation in the README, the API is documented
