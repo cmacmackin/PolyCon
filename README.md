@@ -51,7 +51,9 @@ end module example_container_mod
 ```
 
 ## Compiling
-PolyCon is known to work with Gfortran 5.3.0 and ifort 16.0.1. The latter
+PolyCon is known to work with Gfortran 5.3.0 and ifort 16.0.1 on Ubuntu/Linux
+Mint. It is known not to work for storing character strings when using
+Gfortran 4.8. The latter
 requires the `-assume realloc_lhs` to be used. A makefile is provided which
 calls `gfortran-5`. Static and shared libraries are compiled using `make static`
 and `make shared`, respectively. The test program can be build using
