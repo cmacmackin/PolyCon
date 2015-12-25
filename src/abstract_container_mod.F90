@@ -100,7 +100,9 @@ module abstract_container_mod
       !! Sets the contents of the container.
     procedure, pass(rhs)    ::  assign_container
       !! Assigns container contents to another variable.
+    procedure   ::  is_equal
     generic, public :: assignment(=) => assign_container
+    generic, public :: operator(==) => is_equal
   end type container_type
 
   abstract interface
@@ -189,12 +191,29 @@ contains
       this%filled = .true.
       this%storage = transfer(content, this%storage)
     else
-      write(stderr,*) "ERROR: Can not assign given variable to this container"      
+      write(stderr,*) "ERROR: Can not assign given variable to this container"
 #ifdef __GFORTRAN__
       call backtrace
 #endif
       stop
     end if
   end subroutine set
+
+  logical function is_equal(lhs, rhs)
+    class(container_type), intent(in) :: lhs, rhs
+    if (.not.same_type_as(lhs, rhs)) then
+      is_equal = .false.
+      return
+    end if
+    if ((.not.lhs%filled).and.(.not.rhs%filled)) then
+      is_equal = .true.
+      return
+    end if
+    if (lhs%filled.neqv.rhs%filled) then
+      is_equal = .false.
+      return
+    end if
+    is_equal = all(lhs%storage == rhs%storage)
+  end function is_equal
 
 end module abstract_container_mod

@@ -99,11 +99,13 @@ contains
       !! A variable in which to place the container's contents
     character(len=*), intent(in) :: cont_name
       !! The name of the container class, to be used when printing output
-      
+
+    class(container_type), allocatable :: copy
     character, dimension(1) :: mold
     character(len=30), parameter :: header_form = '("Running test on ", a, "...")'
     character(len=39), parameter :: set_form = '("Setting container to input value...")'
     character(len=44), parameter :: get_form = '("Retreiving value from container...")'
+    character(len=33), parameter :: copy_form = '("Creating copy of container...")'
     character(len=31), parameter :: result_form = '("Test of ", a, " ", a, ".", /)'
 
     write(*,header_form) cont_name
@@ -111,7 +113,9 @@ contains
     call container%set(inval)
     write(*,get_form)
     outval = container
-    if (all(transfer(outval, mold) == transfer(inval, mold))) then
+    write(*,copy_form)
+    allocate(copy, source=container)
+    if (all(transfer(outval, mold) == transfer(inval, mold)).and.(copy == container)) then
       write(*,result_form) cont_name, 'PASSED'
     else
       write(*,result_form) cont_name, 'FAILED'
